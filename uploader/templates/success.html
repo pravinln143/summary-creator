@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Success</title>
+    <style>
+        /* Base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #007BFF; /* Blue background */
+            color: #333;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            background: white; /* Card background */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+            width: 90%;
+            max-width: 600px; /* Max width for the card */
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #007BFF; /* Blue color for the heading */
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        h1:hover {
+            transform: scale(1.05); /* Slight scaling on hover */
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Button styles */
+        .back-btn {
+            display: inline-block;
+            background-color: #ff5722; /* Red color for the button */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none; /* Remove underline from link */
+        }
+
+        .back-btn:hover {
+            background-color: #e64a19; /* Darker red on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 16px;
+            }
+            .back-btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>File Uploaded Successfully!</h1>
+        <p>Your file has been processed, and the summary report has been emailed successfully.</p>
+        <a href="/" class="back-btn">Go Back to Upload Another File</a>
+    </div>
+</body>
+</html>
