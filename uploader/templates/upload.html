@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>summary  generator
-    </title>
+    <title>Summary Generator</title>
     <style>
         /* Base styles */
         * {
@@ -130,10 +129,10 @@
     <div class="floating-shape shape2"></div>
 
     <div class="form-container">
-        <h2>Upload your Excel/CSV file</h2>
+        <h2>Upload Your Excel/CSV File</h2>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            <div class="drop-area" id="drop-area">
+            <div class="drop-area" id="drop-area" role="button" aria-label="Drag and drop your file here or click to browse" tabindex="0">
                 <p>Drag & Drop your file here or click to browse</p>
                 <input id="file-upload" type="file" name="file" accept=".xlsx, .xls, .csv" required>
             </div>
@@ -160,6 +159,13 @@
             dropArea.classList.remove('dragover');
             if (event.dataTransfer.files.length) {
                 fileInput.files = event.dataTransfer.files;
+            }
+        });
+
+        // Keyboard support for drag-and-drop area
+        dropArea.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                fileInput.click();
             }
         });
     </script>

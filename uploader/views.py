@@ -35,7 +35,7 @@ def file_upload_view(request):
             subject= "Pravin Prajapati",
             message='Please find the customized summary report attached.',
             from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=['pravin06082004@gmail.com'],
+            recipient_list=['tech@themedius.ai'],
             html_message=email_message,
         )
 
