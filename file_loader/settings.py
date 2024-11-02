@@ -24,12 +24,7 @@ SECRET_KEY = 'django-insecure-g)msk9cd!7r8=p+nddl!-z5@v5@&av8&^g=7rocjtl_exg1(v7
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = [
-    'localhost',  # For local development
-    '127.0.0.1',  # For local development
-    'web-app-7nv8.onrender.com',  # Your Render app's domain
-]
-
+ALLOWED_HOSTS = ALLOWED_HOSTS = ['web-app-7nv8.onrender.com', 'summary-creator.onrender.com']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://web-app-7nv8.onrender.com',  # Your deployed domain
