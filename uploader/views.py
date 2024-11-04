@@ -1,10 +1,10 @@
-from django.shortcuts import render
-from django.core.mail import send_mail
-from django.conf import settings
-from django.http import HttpResponse
+from django.shortcuts import render 
+from django.core.mail import send_mail 
+from django.conf import settings 
+from django.http import HttpResponse 
 from .models import UploadedFile
-import pandas as pd
-from django.template.loader import render_to_string
+import pandas as pd 
+from django.template.loader import render_to_string 
 
 def file_upload_view(request):
     if request.method == 'POST' and request.FILES['file']:
